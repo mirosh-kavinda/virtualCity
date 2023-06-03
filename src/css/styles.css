@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+  cursor: none;
+}
+.header {
+  text-align: center;
+  margin-top: 8%;
+  margin-left: 35%;
+  opacity: 0.9;
+  justify-self: center;
+  
+  color: black;
+  width: fit-content;
+  height: fit-content;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 213, 233, 1) 100%
+  );
+  padding: 40px;
+  font-size: larger;
+  border-radius: 10px;
+}
+
+.app {
+  text-align: center;
+  background-image: url("./../images/back.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: white;
+}
+
+/* cursor styles  */
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 49px;
+  height: 49px;
+
+  border: 8px solid rgb(252, 231, 192);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  -webkit-transition-duration: 10ms;
+  will-change: width, height, transform, border;
+  z-index: 10000;
+  pointer-events: none;
+}
+.context {
+  margin-top: 10%;
+}
+.canvas {
+  width: 100vw;
+  height: 100vh;
+}
+.imageav {
+  width: 300px;
+  height: 300px;
+}
+.dot {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: rgb(237, 251, 63);
+  background: radial-gradient(
+    circle,
+    rgba(237, 251, 63, 1) 0%,
+    rgba(252, 70, 70, 0.7765188350730917) 100%
+  );
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 120px;
+  background: #27282c;
+}
+.button_group{
+  margin-top: 20%;
+  border-radius: 10px;
+}
+.button {
+ background: black;
+  position: relative;
+  padding: 16px 30px;
+  font-size: 1.5rem;
+  color: var(--color);
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  text-shadow: 0 0 15px var(--color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+ 
+}
+
+.button:hover {
+  color: #fdcf05;
+  border: 2px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0px var(--color);
+  opacity: 0.8;
+  
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.button:hover::before {
+  transform: scale(1);
+  transition-delay: 0.5s;
+  box-shadow: 0 0 10px var(--color), 0 0 30px var(--color),
+    0 0 60px var(--color);
+}
+
+.button span {
+  position: absolute;
+  background: var(--color);
+  pointer-events: none;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--color), 0 0 20px var(--color),
+    0 0 30px var(--color), 0 0 50px var(--color), 0 0 100px var(--color);
+  transition: 0.5s ease-in-out;
+  transition-delay: 0.25s;
+}
+
+.button:hover span {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.button span:nth-child(1),
+.button span:nth-child(3) {
+  width: 40px;
+  height: 4px;
+}
+
+.button:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateX(0);
+}
+
+.button span:nth-child(2),
+.button span:nth-child(4) {
+  width: 4px;
+  height: 40px;
+}
+
+.button:hover span:nth-child(1),
+.button:hover span:nth-child(3) {
+  transform: translateY(0);
+}
+
+.button span:nth-child(1) {
+  top: calc(50% - 2px);
+  left: -50px;
+  transform-origin: left;
+}
+
+.button:hover span:nth-child(1) {
+  left: 50%;
+}
+
+.button span:nth-child(3) {
+  top: calc(50% - 2px);
+  right: -50px;
+  transform-origin: right;
+}
+
+.button:hover span:nth-child(3) {
+  right: 50%;
+}
+
+.button span:nth-child(2) {
+  left: calc(50% - 2px);
+  top: -50px;
+  transform-origin: top;
+}
+
+.button:hover span:nth-child(2) {
+  top: 50%;
+}
+
+.button span:nth-child(4) {
+  left: calc(50% - 2px);
+  bottom: -50px;
+  transform-origin: bottom;
+}
+
+.button:hover span:nth-child(4) {
+  bottom: 50%;
+}
