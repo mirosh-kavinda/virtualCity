@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/virtualCity/static/css/main.c91d54fb.css",
+    "main.js": "/virtualCity/static/js/main.fec3a02e.js",
+    "static/media/evening_road_01_2k.hdr": "/virtualCity/static/media/evening_road_01_2k.9008d71de22661c87185.hdr",
+    "static/media/back.jpg": "/virtualCity/static/media/back.f00f855bc88ea23e39a9.jpg",
+    "index.html": "/virtualCity/index.html",
+    "main.c91d54fb.css.map": "/virtualCity/static/css/main.c91d54fb.css.map",
+    "main.fec3a02e.js.map": "/virtualCity/static/js/main.fec3a02e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c91d54fb.css",
+    "static/js/main.fec3a02e.js"
+  ]
+}
