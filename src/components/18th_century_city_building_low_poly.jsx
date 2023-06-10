@@ -12,7 +12,7 @@ import { useGLTF } from "@react-three/drei";
 
 export function AncientBuildModel(props) {
   const { nodes, materials } = useGLTF(
-    "/18th_century_city_building_low_poly.glb"
+    "/virtualCity/18th_century_city_building_low_poly.glb"
   );
   return (
     <group {...props} dispose={null}>
@@ -49,4 +49,4 @@ export function AncientBuildModel(props) {
   );
 }
 
-useGLTF.preload("/18th_century_city_building_low_poly.glb");
+useGLTF.preload("/virtualCity/18th_century_city_building_low_poly.glb");

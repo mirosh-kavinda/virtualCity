@@ -11,7 +11,7 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
 export function CarModel({ color, ...props }) {
-  const { nodes, materials } = useGLTF("/datsun-transformed.glb");
+  const { nodes, materials } = useGLTF("/virtualCity/datsun-transformed.glb");
 
   const ref = useRef();
 
@@ -111,4 +111,4 @@ export function CarModel({ color, ...props }) {
   );
 }
 
-useGLTF.preload("/datsun-transformed.glb");
+useGLTF.preload("/virtualCity/datsun-transformed.glb");

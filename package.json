@@ -1,7 +1,7 @@
 {
   "name": "virtual_env",
   "version": "0.1.0",
-  "homepage":"http://mirosh-kavinda.github.io/virtualCity",
+  "homepage": "http://mirosh-kavinda.github.io/virtualCity/",
   "private": true,
   "dependencies": {
     "@react-three/cannon": "^6.5.2",

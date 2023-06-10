@@ -18,7 +18,7 @@ export function TowerModel(props) {
   // Hold state for hovered and clicked events
   const [hovered, hover] = useState(false);
   const [clicked, click] = useState(false);
-  const { nodes, materials} = useGLTF('/tower_house_design.glb')
+  const { nodes, materials} = useGLTF('/virtualCity/tower_house_design.glb')
   return (
     <>
 
@@ -939,4 +939,4 @@ onPointerOut={(event) => hover(false)} dispose={null}>
   )
 }  
 
-useGLTF.preload('/tower_house_design.glb')
+useGLTF.preload('/virtualCity/tower_house_design.glb')
